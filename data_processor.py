@@ -9,3 +9,9 @@ class DataCleaner:
             if row is not None:
                 self.cleaned_data.append(row)
         return self.cleaned_data
+
+def process_pipeline():
+    dataset = [1, 2, None, 4, 5]
+    cleaner = DataCleaner(dataset)
+    results = cleaner.remove_nulls()
+    print('Processed:', results)
